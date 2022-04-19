@@ -1,0 +1,173 @@
+$color_gray: rgb(110, 108, 108);
+$color_orange: #e84d1c;
+
+.header {
+  height: 85px;
+  padding: 0 10rem;
+  // background: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    img {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  &__nav-hidden, &__nav {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    li {
+      padding: 1rem;
+      text-transform: uppercase;
+      font-size: 19px;
+      color: $color_gray;
+
+      &:hover {
+        opacity: 0.7;
+        cursor: pointer;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+    }
+  }
+
+  &__action {
+    display: flex;
+  }
+  &__search {
+    position: relative;
+    align-self: center;
+    //   border-left: 1px solid #000;
+    button {
+      margin-left: 20px;
+      padding: 5px 10px;
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+    }
+
+    &-ic {
+      font-size: 22px;
+      color: $color_gray;
+      position: relative;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
+    }
+    &-up {
+      transform: translateX(-20px) translateY(21px);
+      position: absolute;
+      color: $color_orange;
+    }
+    &-ctn {
+      z-index: 1;
+      padding: 20px;
+      background-color: #fcfafb;
+      display: flex;
+      position: absolute;
+      transform: translateY(6px) translateX(-232px);
+      //h-shadow(bóng đổ theo chiều ngang) v-shadow(dọc) blur(độ nhòe) spread(kích thước) color
+      box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.2);
+      border-top: 2px solid $color_orange;
+      input {
+        padding: 6px 12px;
+        border: 1px solid #dbdbdb;
+        outline: none;
+      }
+      button {
+        padding: 7px;
+        color: #fff;
+        border: none;
+        background: $color_orange;
+      }
+    }
+  }
+
+  &__cart {
+    &-ic {
+      font: {
+        size: 22px;
+      }
+      color: $color_gray;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    button {
+      margin-left: 20px;
+      padding: 5px 10px;
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+    }
+  }
+  &__menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    display: block;
+    position: relative;
+    &__logo {
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      padding: 25px;
+    }
+    &__action {
+      position: absolute;
+      right: 0;
+      padding: 25px;
+    }
+    &__menu {
+      margin-left: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      width: 40px;
+      border: 1px solid #ccc;
+      border-radius: 50px;
+      position: absolute;
+      margin-top: 22px;
+      svg{
+          font-size: 22px;
+      }
+      button{
+        padding: 10px;
+        border: none;
+        background-color: inherit;
+      }
+    }
+    &__nav {
+        display: block;
+        position: absolute;
+        transform: translateY(85px);
+        width: 60%;
+        z-index: 1;
+        background-color: #fff;
+        
+        li{
+            border-bottom: 1px solid #000; 
+            font-size: 17px;
+        }
+        &-hidden{
+            display: none;
+        }
+    }
+  }
+}

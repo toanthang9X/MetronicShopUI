@@ -1,0 +1,31 @@
+.footer{
+    color: #81848f;
+    font-size: 12px;
+    height: 80px;
+    background-color: #272626;
+    display: flex;
+    justify-items: center;
+    justify-content: space-around;
+
+    &-cr{
+        align-self: center;
+    }
+    &-pay{
+        align-self: center;
+
+        &-lists{
+            list-style: none;
+            display: flex;
+            
+            li{
+                margin: 0 5px;
+            }
+        }
+    }
+    &-powered{
+        align-self: center;
+        a{
+            color: #e6400c;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.service{
+    display: flex;
+    gap: 0 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-image: linear-gradient(to bottom right, #00ffff40, #f5b5e1);
+    
+    &__common{
+        width: 200px;
+        height: 200px;
+        background-color: #fff;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        gap: 20px 0;
+        padding: 20px;
+        text-transform: uppercase;
+        h3{
+            font-weight: 550;
+        }
+        span{
+            font-style: italic;
+            color: rgb(141, 140, 140);
+        }
+    }
+    &__ic{
+        color: #57c8eb;
+        font-size: 35px;
+    }
+}

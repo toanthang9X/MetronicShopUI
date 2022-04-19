@@ -1,0 +1,54 @@
+.modal__itempc{
+    z-index: 2;
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    animation: showFace ease 0.3s;
+}
+.itempc {
+    padding: 15px;
+    position: relative;
+    height: 550px;
+    max-width: calc(100% - 20px);
+    background-color: #fafafa;
+
+
+    &__closepc {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(50%, -50%);
+        width: 30px;
+        height: 30px;
+        border-radius: 100rem;
+        color: white;
+        background-color: black;
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+    &__imagepc{
+        height: 100%;
+        img{
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+@keyframes showFace{
+    from{
+        transform: translateY(-62px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
