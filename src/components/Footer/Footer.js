@@ -20,7 +20,7 @@ function Footer() {
             </ul>
         </div>
         <div className='footer-powered'>
-            <p>Powered by: <a href='#'>KeenThemes.com</a></p>
+            <p>Powered by: <a href='#'>KeenThemes.com</a> </p>
         </div>
     </div>
   )
