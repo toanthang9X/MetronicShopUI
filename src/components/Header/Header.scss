@@ -4,7 +4,6 @@ $color_orange: #e84d1c;
 .header {
   height: 85px;
   padding: 0 10rem;
-  // background: #ccc;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,6 +20,7 @@ $color_orange: #e84d1c;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-bottom: 0;
 
     li {
       padding: 1rem;
@@ -38,14 +38,12 @@ $color_orange: #e84d1c;
       }
     }
   }
-
   &__action {
     display: flex;
   }
   &__search {
     position: relative;
     align-self: center;
-    //   border-left: 1px solid #000;
     button {
       margin-left: 20px;
       padding: 5px 10px;
@@ -53,12 +51,10 @@ $color_orange: #e84d1c;
       background-color: inherit;
       cursor: pointer;
     }
-
     &-ic {
+      color: #000;
       font-size: 22px;
-      color: $color_gray;
       position: relative;
-
       &:hover {
         cursor: pointer;
         opacity: 0.7;
@@ -68,7 +64,9 @@ $color_orange: #e84d1c;
       transform: translateX(-20px) translateY(21px);
       position: absolute;
       color: $color_orange;
+      animation: animationSearch .8s 1 ease;
     }
+    
     &-ctn {
       z-index: 1;
       padding: 20px;
@@ -79,6 +77,7 @@ $color_orange: #e84d1c;
       //h-shadow(bóng đổ theo chiều ngang) v-shadow(dọc) blur(độ nhòe) spread(kích thước) color
       box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.2);
       border-top: 2px solid $color_orange;
+      animation: animationSearch 1s 1 ease;
       input {
         padding: 6px 12px;
         border: 1px solid #dbdbdb;
@@ -98,7 +97,7 @@ $color_orange: #e84d1c;
       font: {
         size: 22px;
       }
-      color: $color_gray;
+      color: #000;
       cursor: pointer;
 
       &:hover {
@@ -115,6 +114,14 @@ $color_orange: #e84d1c;
   }
   &__menu {
     display: none;
+  }
+}
+@keyframes animationSearch {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -154,15 +161,18 @@ $color_orange: #e84d1c;
       }
     }
     &__nav {
+        animation: animationSearch 1s 1 ease;
+        box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.2);
         display: block;
         position: absolute;
         transform: translateY(85px);
         width: 60%;
         z-index: 1;
         background-color: #fff;
+        padding-right: 2rem;
         
         li{
-            border-bottom: 1px solid #000; 
+            border-bottom: 1px solid #ccc; 
             font-size: 17px;
         }
         &-hidden{

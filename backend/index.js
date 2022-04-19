@@ -5,7 +5,7 @@ const app = express()
 const products = [
     {
         id: 1,
-        img: '	https://technext.github.io/Metronic-Shop-UI/theme/assets/pages/img/products/model1.jpg',
+        img: 'https://technext.github.io/Metronic-Shop-UI/theme/assets/pages/img/products/model1.jpg',
         name: 'Berry Lace Dress',
         price: 39,
         size: ['M','L','XL'],

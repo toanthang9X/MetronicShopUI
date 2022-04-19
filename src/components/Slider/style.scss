@@ -1,19 +1,88 @@
 .slider{
-    padding-top: 50%;
-    background: url('https://www.jssor.com/premium/fashion/img/plaza.jpg') top center/cover no-repeat;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    position: relative;
-    &__content{
-        position: absolute;
-        top: 0;
-        color: #fff;
-        padding: 20px;
+    &__caption {
+        width: 400px;
+        top: 5%;
+        //right: 5%;
+        hr{
+            color: #fff;
+        }
+        span {
+            color: #fff;
+            display: block;
+            padding: 10px 0;
+        }
+        img {
+            position: absolute;
+            top: 10%;
+            left: 75%;
+            animation: img_slider2 1s 1 ease;
+        }
+        button {
+            padding: 10px 20px;
+            border: 1px solid #fff;
+            color: #fff;
+            background-color: transparent;
+            animation: title2_slider1 1s 1 ease;
+            &:hover {
+                background: #e6400c;
+                border: 1px solid #e6400c;
+            }
+        }
     }
     &__title{
-        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 40px;
+        color: #fff;
+        animation: title1_slider1 1s 1 ease;
+        &-orange {
+            color: #e6400c;
+        }
     }
-    &__text{
-        font-style: italic;
+    &__des {
+        color: #fff;
+        animation: title2_slider1 1s 1 ease;
+    }
+    &__text {
+        &-l {
+            font-size: 40px;
+        }
+        &-m {
+            font-size: 30px;
+        }
+        &-s {
+            font-size: 20px;
+        }
+        &-b {
+            font-weight: bold;
+        }
+        &-down{
+            animation: title1_slider1 1s 1 ease;
+        }
+    }
+}
+@keyframes title1_slider1 {
+    0% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes title2_slider1 {
+    0% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes img_slider2 {
+    0% {
+        width: 50px;
+        height: 50px;
+    }
+    100% {
+        width: 189px;
+        height: 189px;
     }
 }
