@@ -36,7 +36,7 @@ function Header() {
           <Link to="/product">Product</Link>
         </li>
         <li onClick={handleNav}>
-          <Link to="/blog">Blog</Link>
+          Blog
         </li>
       </ul>
       <div className="header__action">
@@ -57,7 +57,7 @@ function Header() {
 
         <div className="header__cart">
             <button>
-            <AiOutlineShoppingCart className="header__cart-ic" />
+            <Link to="/cart"><AiOutlineShoppingCart className="header__cart-ic" /></Link>
             </button>
         </div>
       </div>

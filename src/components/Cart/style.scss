@@ -1,0 +1,18 @@
+.cartcontainer{
+
+}
+.cart {
+    &__cad{
+        display: flex;
+        align-items: center;
+        img{
+            height: 100px;
+            width: 100px;
+            border-radius: 50px;
+        }
+    }
+    &__info {
+        display: flex;
+        align-items: center;
+    }
+}

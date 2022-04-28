@@ -1,3 +1,114 @@
+$color_linkBlue: #57c8eb;
+.preFooter{
+    padding-top: 60px;
+    background-color: #313030;
+    color: #b0b0b0;
+    font-size: 13px;
+    .container-preFT{
+        display: flex;
+        justify-content: space-around;
+        margin: 0 60px;
+
+        &-about{
+            flex-basis: 20%;
+        }
+        &-info{
+            ul{
+                list-style: none;
+            }
+            li{
+                margin-bottom: 5px;
+
+                .ic-outline{
+                    margin-right: 5px;
+                }
+                &:hover{
+                    text-decoration: underline;
+                    opacity: .8;
+                }
+            }
+            a{
+                color: $color_linkBlue;
+                text-decoration: none;
+            }
+
+        }
+        &-tweets{
+            a{
+                color: $color_linkBlue;
+            }
+
+        }
+        &-contact{
+            address{
+                line-height: 20px;
+            }
+            a{
+                color: $color_linkBlue;
+            }
+        }
+
+        &-title{
+            margin-bottom: 10px;
+        }
+    }
+    .ct-seperate{
+        margin: 20px 220px;
+        border-bottom: 1px solid #b0b0b0;
+    }
+
+    .container-info{
+        display: flex;
+        justify-content: space-around;
+        min-height: 50px;
+        ul{
+            align-self: center;
+            display: flex;
+            list-style: none;
+
+            li{
+                padding: 3px;
+                margin-right: 5px;
+                background-color: #b0b0b0;
+                font-size: 18px;
+                color: #333;
+
+                &:hover{
+                    cursor: pointer;
+                    opacity: .8;
+                }
+            }
+        }
+
+        &-email{
+            display: flex;
+            padding: 20px;
+
+            h2{
+                align-self: center;
+                margin-right: 20px;
+            }
+            input{
+                padding: 5px 10px;
+                outline: none;
+                border: 1px solid #b0b0b0;
+                background-color: #313030;
+                color: #b0b0b0;
+            }
+            button{
+                background-color: #e94d1c;
+                color: #fff;
+                border: none;
+                padding: 5px;
+                
+                &:hover{
+                    opacity: .8;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
 .footer{
     color: #81848f;
     font-size: 12px;
