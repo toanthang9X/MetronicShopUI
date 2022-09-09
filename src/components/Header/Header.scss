@@ -51,13 +51,20 @@ $color_orange: #e84d1c;
       border: none;
       background-color: inherit;
       cursor: pointer;
+      &:hover {
+        background: #ccc;
+        border-radius: 4px;
+        & * {
+          color: #e84d1c;
+
+        }
+      }
     }
     &-ic {
       color: #000;
       font-size: 22px;
       position: relative;
       &:hover {
-        cursor: pointer;
         opacity: 0.7;
       }
     }
@@ -111,6 +118,14 @@ $color_orange: #e84d1c;
       border: none;
       background-color: inherit;
       cursor: pointer;
+      &:hover {
+        background: #ccc;
+        border-radius: 4px;
+        & * {
+          color: #e84d1c;
+
+        }
+      }
     }
   }
   &__menu {
@@ -146,19 +161,23 @@ $color_orange: #e84d1c;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 40px;
-      width: 40px;
-      border: 1px solid #ccc;
-      border-radius: 50px;
       position: absolute;
       margin-top: 22px;
       svg{
-          font-size: 22px;
+        font-size: 22px;
       }
       button{
-        padding: 10px;
+        height: 40px;
+        width: 40px;
         border: none;
-        background-color: inherit;
+        border-radius: 4px;
+        background-color: #fff;
+        &:hover {
+        background-color: #ccc;
+          & * {
+            color: #e84d1c;
+          }
+        }
       }
     }
     &__nav {
