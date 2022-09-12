@@ -5,7 +5,7 @@
     align-items: center;
     padding: 20px;
     background-image: linear-gradient(to bottom right, #00ffff40, #f5b5e1);
-    
+    flex-wrap: wrap;
     &__common{
         width: 200px;
         height: 200px;
@@ -16,7 +16,8 @@
         justify-items: center;
         align-items: center;
         gap: 20px 0;
-        padding: 5px 0;
+        padding: 5px;
+        margin: 20px 0;
         text-transform: uppercase;
         h3{
             font-weight: 550;
